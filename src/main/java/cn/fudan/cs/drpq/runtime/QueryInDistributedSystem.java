@@ -328,9 +328,7 @@ public class QueryInDistributedSystem {
                 if (input != null) {
                     throughput_tuples.add(input);
                 } else {
-                    System.out.println("Send finish, avg rate = " + 5628166 / ((System.nanoTime() - process_begin) * 1.0 / 1000000000));
                     process_end.set(System.nanoTime());
-                    real_throughput = 5628166 / ((process_end.get() - process_begin) * 1.0 / 1000000000);
                     executor.shutdown();
                 }
             };
